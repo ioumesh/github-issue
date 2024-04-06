@@ -14,7 +14,7 @@ const IssuesContainer = () => {
   const observer = useRef();
   let query = `?per_page=30&page=${page}`;
 
-  useEffect(() => {
+  const fetchIssue = () => {
     fetchFromAPI(query).then((res) => {
       if (!issues.length) {
         setIssues(res);
@@ -27,6 +27,9 @@ const IssuesContainer = () => {
       setHasMore(res.length > 0);
       setLoading(false);
     });
+  }
+  useEffect(() => {
+    fetchIssue()
   }, [page]);
 
   const lastIssue = useCallback(
