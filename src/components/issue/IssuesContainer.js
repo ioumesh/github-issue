@@ -27,7 +27,7 @@ const IssuesContainer = () => {
       setHasMore(res.length > 0);
       setLoading(false);
     });
-  }, [page,query,issues.length]);
+  }, [page]);
 
   const lastIssue = useCallback(
     (node) => {
