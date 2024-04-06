@@ -16,7 +16,9 @@ const IssuesContainer = () => {
 
   useEffect(() => {
     fetchFromAPI(query).then((res) => {
-      if (!issues.length) setIssues(res);
+      if (!issues.length) {
+        setIssues(res);
+      }
       else {
         setIssues((prevIssues) => {
           return [...prevIssues, ...res];
