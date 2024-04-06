@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.box-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.heading_link:hover {
+  text-decoration: underline;
+}
+.header_buttons:hover {
+  background-color: rgb(233, 233, 233);
+}
+.issue-cont:hover {
+  background-color: rgb(245, 245, 245);
+}
+.issue-title {
+  cursor: pointer;
+}
+.issue-title:hover {
+  color: #0969da;
+}
+
+@media (max-width: 1030px) {
+  .issue-header {
+    display: none;
+    margin-right: 20px;
+  }
+}
