@@ -18,8 +18,7 @@ const IssuesContainer = () => {
     fetchFromAPI(query).then((res) => {
       if (!issues.length) {
         setIssues(res);
-      }
-      else {
+      } else {
         setIssues((prevIssues) => {
           return [...prevIssues, ...res];
         });

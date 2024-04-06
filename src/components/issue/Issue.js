@@ -3,6 +3,7 @@ import ModeStandbyIcon from "@mui/icons-material/ModeStandby";
 import Label from "./Label";
 import Comment from "./Comment";
 import moment from "moment/moment";
+import Avatar from "./Avatar";
 
 const Issue = ({
   issue: {
@@ -11,7 +12,7 @@ const Issue = ({
     title,
     comments,
     created_at,
-    user: { login },
+    user: { login, avatar_url },
   },
   innerRef,
 }) => {
@@ -54,6 +55,7 @@ const Issue = ({
           </span>
         </Stack>
       </Stack>
+      <Box>{<Avatar avatar={avatar_url} />}</Box>
       <Box>{comments > 0 && <Comment comments={comments} />}</Box>
     </Stack>
   );

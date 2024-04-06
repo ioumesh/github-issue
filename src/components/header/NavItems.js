@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import Nums from "./Nums";
+import Numbers from "./Numbers";
 
 const NavItem = ({ name, icon, num }) => {
   const borderBottom = name === "Issues" ? "3px solid orange" : "";
@@ -20,7 +20,7 @@ const NavItem = ({ name, icon, num }) => {
         color: "#4d4c4c",
       }}
     >
-      {icon} <Box sx={{ minWidth }}>{name}</Box> {num && <Nums num={num} />}
+      {icon} <Box sx={{ minWidth }}>{name}</Box> {num && <Numbers num={num} />}
     </Box>
   );
 };

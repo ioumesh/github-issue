@@ -7,7 +7,7 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import ForkLeftIcon from "@mui/icons-material/ForkLeft";
 
-import {navs} from "../../utils/constants"
+import { navs } from "../../utils/constants";
 import NavItem from "./NavItems";
 
 const Header = () => {

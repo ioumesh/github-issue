@@ -1,12 +1,11 @@
-
 import { Container } from "@mui/material";
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import IssuesContainer from './components/issue/IssuesContainer';
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import IssuesContainer from "./components/issue/IssuesContainer";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Container
         maxWidth="xl"
         className="box-center"
@@ -21,7 +20,6 @@ function App() {
         <IssuesContainer />
         <Footer />
       </Container>
-
     </div>
   );
 }

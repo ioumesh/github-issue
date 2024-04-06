@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nums = ({ num }) => {
+const Numbers = ({ num }) => {
   return (
     <div
       style={{
@@ -20,4 +20,4 @@ const Nums = ({ num }) => {
   );
 };
 
-export default Nums;
+export default Numbers;
