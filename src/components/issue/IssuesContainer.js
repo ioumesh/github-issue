@@ -30,7 +30,7 @@ const IssuesContainer = () => {
   }
   useEffect(() => {
     fetchIssue()
-  }, [page]);
+  }, []);
 
   const lastIssue = useCallback(
     (node) => {
