@@ -14,7 +14,8 @@ const IssuesContainer = () => {
   const observer = useRef();
   let query = `?per_page=30&page=${page}`;
 
-  const fetchIssue = () => {
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     fetchFromAPI(query).then((res) => {
       if (!issues.length) {
         setIssues(res);
@@ -27,10 +28,7 @@ const IssuesContainer = () => {
       setHasMore(res.length > 0);
       setLoading(false);
     });
-  }
-  useEffect(() => {
-    fetchIssue()
-  }, []);
+  }, [page]);
 
   const lastIssue = useCallback(
     (node) => {
