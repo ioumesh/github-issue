@@ -2,7 +2,7 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import { Box } from "@mui/material";
 const Comment = ({ comments }) => {
   return (
-    <Box className="box-center" sx={{ fontSize: "14px", marginTop: "-15px" }}>
+    <Box className="box-center" sx={{ fontSize: "14px", }}>
       <ChatBubbleOutlineOutlinedIcon style={{ fontSize: "14px" }} />
       &nbsp;
       {comments}

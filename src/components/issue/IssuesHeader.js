@@ -18,7 +18,7 @@ const IssuesHeader = () => {
         height: "50px",
         borderRadius: "6px 6px 0px 0px",
         fontSize: "12px",
-        overflow: "hidden",
+        overflow: "auto",
       }}
     >
       <Box className="box-center issue-header" gap={2}>

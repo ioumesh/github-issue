@@ -54,6 +54,7 @@ const IssuesContainer = () => {
           paddingLeft: "0 !important",
           paddingRight: "0 !important",
           width: { sm: "82vw !important", xs: "94vw !important" },
+          overflow:"auto"
         }}
       >
         <IssuesHeader />

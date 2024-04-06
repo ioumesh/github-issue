@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <Container
         sx={{
-          display: { md: "flex", xs: "none" },
+          display: { md: "flex" },
           justifyContent: "center",
           alignItems: "center",
           padding: "2rem",
@@ -15,7 +15,13 @@ const Footer = () => {
           width: { sm: "95vw !important", xs: "94vw !important" },
         }}
       >
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: { md: "unset", xs: "column" },
+          }}
+        >
           <LightbulbOutlinedIcon sx={{ fontSize: "20px" }} />
           <Typography>
             <strong>Protip!</strong>
@@ -28,14 +34,16 @@ const Footer = () => {
       </Container>
       <Container
         sx={{
-          display: { md: "flex", xs: "none" },
+          display: { md: "flex" },
           gap: "2rem",
           justifyContent: "space-between",
           alignItems: "center",
-          padding:"2rem"
+          padding: "2rem",
         }}
       >
-        <Box sx={{ display: "flex", gap: "3rem" }}>
+        <Box
+          sx={{ display: "flex", gap: "3rem", flexDirection: {md:"unset", xs: "column" } }}
+        >
           {footerTitles[0].map((title, index) => {
             return (
               <span className="footer_links" key={`title-${index}`}>
@@ -47,7 +55,7 @@ const Footer = () => {
         <Box>
           <GitHub />
         </Box>
-        <Box sx={{ display: "flex", gap: "3rem" }}>
+        <Box sx={{ display: "flex", gap: "3rem" ,flexDirection: {md:"unset", xs: "column" } }}>
           {footerTitles[1].map((title, index) => {
             return (
               <span className="footer_links" key={`title-${index}`}>

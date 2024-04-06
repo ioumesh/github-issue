@@ -74,7 +74,7 @@ const Header = () => {
         </Box>
         <Box
           sx={{
-            display: { md: "flex", xs: "none" },
+            display: { md: "flex" },
             justifyContent: "center",
             alignItems: "center",
             fontSize: "14px",

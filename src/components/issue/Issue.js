@@ -55,8 +55,10 @@ const Issue = ({
           </span>
         </Stack>
       </Stack>
-      <Box>{<Avatar avatar={avatar_url} />}</Box>
-      <Box>{comments > 0 && <Comment comments={comments} />}</Box>
+      <Stack direction="row" alignItems="center" gap={{ md: 12, xs: 2 }}>
+        <Box>{<Avatar avatar={avatar_url} />}</Box>
+        <Box>{ <Comment comments={comments} />}</Box>
+      </Stack>
     </Stack>
   );
 };
