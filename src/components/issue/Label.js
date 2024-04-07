@@ -3,6 +3,7 @@ const Label = ({ label }) => {
   const whiteTexts = [
     "Type: Bug",
     "React Core Team",
+    "React 19",
     "Status: New",
     "dependencies",
     "Component: Fast Refresh",
