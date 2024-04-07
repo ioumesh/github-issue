@@ -17,6 +17,7 @@ const Issue = ({
   innerRef,
 }) => {
   const time = moment(created_at).fromNow();
+  const avatarPosiiton=comments>0?12:15
   return (
     <Stack
       direction="row"
@@ -55,9 +56,9 @@ const Issue = ({
           </span>
         </Stack>
       </Stack>
-      <Stack direction="row" alignItems="center" gap={{ md: 12, xs: 2 }}>
+      <Stack direction="row" alignItems="center" gap={{ md:avatarPosiiton, xs: 2 }}>
         <Box>{<Avatar avatar={avatar_url} />}</Box>
-        <Box>{ <Comment comments={comments} />}</Box>
+        <Box>{comments>0 &&<Comment comments={comments} />}</Box>
       </Stack>
     </Stack>
   );

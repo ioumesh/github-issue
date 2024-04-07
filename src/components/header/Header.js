@@ -1,14 +1,13 @@
 import React from "react";
 import { Container, Stack, Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
 import HeaderData from "./HeaderData";
+import HeaderNavItems from "./HeaderNavItems";
+import { navs } from "../../utils/constants";
+import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import ForkLeftIcon from "@mui/icons-material/ForkLeft";
-
-import { navs } from "../../utils/constants";
-import NavItem from "./NavItems";
 
 const Header = () => {
   return (
@@ -109,7 +108,7 @@ const Header = () => {
       >
         {navs.map((nav) => {
           return (
-            <NavItem
+            <HeaderNavItems
               key={nav.name}
               name={nav.name}
               icon={nav.icon}

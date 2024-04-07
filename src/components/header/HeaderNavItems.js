@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import Numbers from "./Numbers";
 
-const NavItem = ({ name, icon, num }) => {
+const HeaderNavItems = ({ name, icon, num }) => {
   const borderBottom = name === "Issues" ? "3px solid orange" : "";
   const fontWeight = name === "Issues" ? "bold" : "normal";
   const minWidth = name === "Pull request" ? "80px" : "0px";
@@ -25,4 +25,4 @@ const NavItem = ({ name, icon, num }) => {
   );
 };
 
-export default NavItem;
+export default HeaderNavItems;

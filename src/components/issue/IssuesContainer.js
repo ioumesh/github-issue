@@ -30,14 +30,23 @@ const IssuesContainer = () => {
 
   const lastIssue = useCallback(
     (node) => {
+      // If we're currently loading data, do nothing
       if (loading) return;
+
+      // If there's an existing observer, disconnect it
       if (observer.current) observer.current.disconnect();
+
+      // Create a new IntersectionObserver
       observer.current = new IntersectionObserver((entries) => {
+        // If the observed element intersects the viewport and there's more data to load
         if (entries[0].isIntersecting && hasMore) {
+          // Increment the page number and set loading to true
           setPage((prevPage) => prevPage + 1);
           setLoading(true);
         }
       });
+
+      // If a node is provided, start observing it
       if (node) observer.current.observe(node);
     },
     [loading, hasMore]
@@ -54,7 +63,7 @@ const IssuesContainer = () => {
           paddingLeft: "0 !important",
           paddingRight: "0 !important",
           width: { sm: "82vw !important", xs: "94vw !important" },
-          overflow:"auto"
+          overflow: "auto",
         }}
       >
         <IssuesHeader />
